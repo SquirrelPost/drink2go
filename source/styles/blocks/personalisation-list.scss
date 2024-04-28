@@ -1,0 +1,80 @@
+.personalisation-list {
+  display: flex;
+
+  @media (max-width: $mobile-width-only) {
+    padding-right: 40px;
+  }
+}
+
+.personalisation-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 8px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &::before {
+    content: "";
+    background-color: $base-black;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--login::before {
+    mask-image: url("../../icons/user.svg");
+  }
+
+  &--basket::before {
+    mask-image: url("../../icons/basket.svg");
+  }
+
+  &:hover {
+    color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+
+  &:active {
+    background-color: $base-secondary;
+
+    @media (min-width: $tablet-width) {
+      color: $base-primary;
+
+      &::before {
+        background-color: $base-primary;
+      }
+    }
+  }
+
+  &:focus {
+    color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+}
+
+.personalisation-list__link-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

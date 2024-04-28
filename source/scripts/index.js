@@ -1,1 +1,3 @@
-/* в этот файл добавляет скрипты*/
+import { initNav } from './nav.js';
+
+initNav();
