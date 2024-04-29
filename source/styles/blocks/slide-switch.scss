@@ -1,0 +1,79 @@
+.slide-switch {
+  position: relative;
+}
+
+.slide-switch__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 656px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $base-primary;
+    mask-repeat: no-repeat;
+    mask-size: 11px 20px;
+    mask-position: center;
+    mask-image: url("../../icons/arrow.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+
+  &--prev {
+    &::before {
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &--next {
+    left: auto;
+    right: 0;
+
+    &::before {
+      transform: scale(-1, 1) translate(50%, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background-image: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+
+    ::before {
+      background-color: $base-grey;
+    }
+  }
+}

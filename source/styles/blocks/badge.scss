@@ -1,0 +1,7 @@
+.badge {
+  @include font(12px, 16px);
+  font-weight: 700;
+  letter-spacing: 0.04;
+  color: $base-primary;
+  text-transform: uppercase;
+}

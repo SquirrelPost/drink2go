@@ -1,6 +1,6 @@
 .header {
-  display: flex;
   @include container;
+  display: flex;
 }
 
 .header__logo {

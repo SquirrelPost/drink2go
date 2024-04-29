@@ -1,0 +1,11 @@
+.price {
+  @include font(20px, 32px);
+  font-weight: 600;
+
+  &--old {
+    @include font(16px, 32px);
+    font-weight: 400;
+    color: $base-primary;
+    text-decoration: line-through;
+  }
+}

@@ -13,6 +13,7 @@
   padding: 0 20px;
   margin: 0 auto;
   max-width: $mobile-width;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
