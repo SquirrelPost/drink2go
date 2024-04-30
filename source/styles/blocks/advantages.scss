@@ -1,0 +1,128 @@
+.advantages {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.advantages__badge {
+  order: -1;
+  margin-bottom: 4px;
+}
+
+.advantages__title {
+  margin: 0 0 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+    padding-inline: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-inline: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.advantages__item-title {
+  margin: 0 0 4px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px, 24px);
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    position: relative;
+    padding-left: 72px;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 56px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--speed::before {
+    background-image: url("../../icons/adv-speed.svg");
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      top: 4px;
+    }
+  }
+
+  &--fit::before {
+    background-image: url("../../icons/adv-fit.svg");
+  }
+
+  &--energy::before {
+    background-image: url("../../icons/adv-energy.svg");
+  }
+
+  &--eco::before {
+    background-image: url("../../icons/adv-eco.svg");
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      top: 4px;
+    }
+  }
+}
