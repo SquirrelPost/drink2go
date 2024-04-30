@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="/vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -208,7 +209,130 @@
         </li>
       </ul>
     </section>
+    <section class="catalog">
+      <div class="catalog__container">
+        <h2 class="catalog__title headline headline--h2">Каталог кофейных напитков</h2>
+        <span class="catalog__badge badge">Каталог</span>
+        <div class="catalog__content-container">
+          <div class="catalog__filter filter">
+            <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="filter__container">
+                <fieldset class="filter__fieldset range">
+                  <legend class="filter__legend label">Цена</legend>
+                  <div class="range__slider"></div>
+                  <div class="range__input-wrapper">
+                    <label class="visually-hidden" for="min-price">Минимальная цена.</label>
+                    <input class="range__input" id="min-price" name="min-price" type="number" placeholder="0">
+                    <label class="visually-hidden" for="max-price">Максимальная цена.</label>
+                    <input class="range__input" id="max-price" name="max-price" type="number" placeholder="999"
+                      value="900">
+                  </div>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend label">Наличие молока</legend>
+                  <ul class="filter__list">
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="radio" name="milk-availability"
+                          value="no-matter" checked>
+                        <span class="control__mark control__mark--radio"></span>
+                        <span class="control__label">Неважно</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="radio" name="milk-availability"
+                          value="animal-milk">
+                        <span class="control__mark control__mark--radio"></span>
+                        <span class="control__label">Только животное</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="radio" name="milk-availability"
+                          value="plant-milk">
+                        <span class="control__mark control__mark--radio"></span>
+                        <span class="control__label">Только растительное</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="radio" name="milk-availability"
+                          value="no-milk" disabled>
+                        <span class="control__mark control__mark--radio"></span>
+                        <span class="control__label">Без молока</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter__fieldset">
+                  <legend class="filter__legend label">Страна произрастания</legend>
+                  <ul class="filter__list">
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="checkbox" name="country-Brazil" checked>
+                        <span class="control__mark control__mark--checkbox"></span>
+                        <span class="control__label">Бразилия</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="checkbox" name="country-Ethiopia">
+                        <span class="control__mark control__mark--checkbox"></span>
+                        <span class="control__label">Эфиопия</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="checkbox" name="country-Colombia">
+                        <span class="control__mark control__mark--checkbox"></span>
+                        <span class="control__label">Колумбия</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="checkbox" name="country-Costa-Rica">
+                        <span class="control__mark control__mark--checkbox"></span>
+                        <span class="control__label">Коста-Рика</span>
+                      </label>
+                    </li>
+                    <li class="filter__item">
+                      <label class="filter__control control">
+                        <input class="visually-hidden control__input" type="checkbox" name="country-Peru" disabled>
+                        <span class="control__mark control__mark--checkbox"></span>
+                        <span class="control__label">Перу</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="filter__button-container">
+                <button class="filter__button button" type="submit">Применить</button>
+                <button class="filter__button filter__button--small button button--second"
+                  type="reset">Сбросить</button>
+              </div>
+            </form>
+          </div>
+          <div class="catalog__sorting sorting">
+            <span class="sorting__label label">Сортировка:</span>
+            <select class="sorting__control" aria-label="Сортировка">
+              <option value="default">по умолчанию</option>
+              <option value="cheap">по увеличению цены</option>
+              <option value="expensive">по уменьшению цены</option>
+            </select>
+          </div>
+          <div class="catalog__products products">
+            <!-- <ul class="products__list">
+
+          </ul> -->
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script src="vendor/nouislider/nouislider.js"></script>
+
 </body>
 
 </html>
