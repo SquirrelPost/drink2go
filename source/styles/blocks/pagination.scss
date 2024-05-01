@@ -38,6 +38,15 @@
     }
   }
 
+  &--prev {
+    grid-column: 1 / 2;
+  }
+
+  &--next {
+    grid-column: 3 / 4;
+  }
+
+
   @media (min-width: $tablet-width) {
     padding: 8px 20px;
     width: fit-content;
@@ -55,6 +64,7 @@
   display: grid;
   grid-template-columns: repeat(3, 40px);
   gap: 20px;
+  grid-column: 2 / 3;
 }
 
 .pagination__page-number {

@@ -1,5 +1,5 @@
 const PRICE = {
-  MAX: 1068,
+  MAX: 1055,
   MIN: 0,
 };
 const STEP = 1;

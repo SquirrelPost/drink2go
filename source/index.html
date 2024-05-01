@@ -179,17 +179,17 @@
       </ul>
       <ol class="slider__pagination slide-pagination">
         <li class="slide-pagination__item">
-          <a class="slide-pagination__button slide-pagination__button--current" id="0">
+          <a class="slide-pagination__button slide-pagination__button--current" id="0-slide">
             <span class="visually-hidden">Первый слайд.</span>
           </a>
         </li>
         <li class="slide-pagination__item">
-          <a class="slide-pagination__button" href="#" id="1">
+          <a class="slide-pagination__button" href="#" id="1-slide">
             <span class="visually-hidden">Второй слайд.</span>
           </a>
         </li>
         <li class="slide-pagination__item">
-          <a class="slide-pagination__button" href="#" id="2">
+          <a class="slide-pagination__button" href="#" id="2-slide">
             <span class="visually-hidden">Третий слайд.</span>
           </a>
         </li>
@@ -465,17 +465,18 @@
             </button>
             <ul class="pagination__list">
               <li class="pagination__item">
-                <button class="pagination__page-number button button--secondary" type="button">
+                <button class="pagination__page-number button button--secondary" type="button" id="0-pagination">
                   <span class="pagination__page-number-text">1</span>
                 </button>
               </li>
               <li class="pagination__item">
-                <button class="pagination__page-number pagination__page-number--current button button--secondary" type="button">
+                <button class="pagination__page-number pagination__page-number--current button button--secondary"
+                  type="button" tabindex="-1" id="1-pagination">
                   <span class="pagination__page-number-text">2</span>
                 </button>
               </li>
               <li class="pagination__item">
-                <button class="pagination__page-number button button--secondary" type="button">
+                <button class="pagination__page-number button button--secondary" type="button" id="2-pagination">
                   <span class="pagination__page-number-text">3</span>
                 </button>
               </li>
