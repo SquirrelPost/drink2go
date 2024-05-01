@@ -14,14 +14,6 @@
   padding: 8px 20px;
   cursor: pointer;
 
-  //   &--catalog {
-  //     padding: 10px;
-
-  //     @media (min-width: $tablet-width) {
-  //       @include font(16px, 20px);
-  //     }
-  //   }
-
   &:hover,
   &:focus {
     background-color: $primary-lighter;
@@ -30,18 +22,35 @@
 
   &:active {
     background-color: $primary-darker;
+    color: $base-white;
   }
 
   &:disabled {
     background-color: $base-grey;
+    color: $base-white;
+    pointer-events: none;
+    cursor: default;
   }
 
-  &--second {
+  &--secondary {
     color: $base-primary;
     background-color: $base-white;
 
     &:disabled {
       background-color: $light-grey;
+    }
+  }
+
+  &--with-icon {
+    @include font(14px, 20px);
+    display: flex;
+    gap: 6px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 16px;
+      background-image: url("../../icons/card-plus.svg");
     }
   }
 }

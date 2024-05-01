@@ -5,24 +5,25 @@
   cursor: pointer;
   max-width: fit-content;
 
-  //   @media (min-width: $tablet-width) {
-  //     gap: 20px;
-  //   }
-
   &:hover .control__mark,
-  &:focus .control__mark {
+  &:focus-within .control__mark {
     border-color: $primary-lighter;
   }
 
   &:hover .control__mark::after,
   &:hover .control__mark--checkbox,
-  &:focus .control__mark::after,
-  &:focus .control__mark--checkbox {
+  &:focus-within .control__mark::after,
+  &:focus-within .control__mark--checkbox {
     background-color: $primary-opacity;
   }
 
   &:active {
     opacity: 0.8;
+  }
+
+  &:focus-within {
+    outline-offset: 4px;
+    outline: 2px solid $base-primary
   }
 }
 
@@ -72,11 +73,6 @@
       border-radius: 50%;
     }
   }
-
-  //   @media (min-width: $tablet-width) {
-  //     width: 40px;
-  //     height: 40px;
-  //   }
 }
 
 .control__input:checked+.control__mark {
@@ -86,21 +82,11 @@
 .control__input[type="radio"]:checked+.control__mark::after,
 .control__input[type="checkbox"]:checked+.control__mark {
   background-color: $base-primary;
-
-  //   @media (min-width: $tablet-width) {
-  //     width: 18px;
-  //     height: 18px;
-  //   }
 }
 
 .control__input[type="checkbox"]:checked+.control__mark::before {
   left: auto;
   right: 1px;
-
-  //   @media (min-width: $tablet-width) {
-  //     width: 26px;
-  //     height: 26px;
-  //   }
 }
 
 .control__input:disabled+.control__mark,
@@ -109,10 +95,6 @@
   color: $base-grey;
   background-color: $lightest-grey;
   cursor: default;
-}
-
-.control__input:checked:disabled+.control__mark::after {
-  background-color: $light-grey;
 }
 
 .control__input:disabled:hover+.control__mark::after {
@@ -127,8 +109,8 @@
   background-color: $light-grey;
 }
 
-.control__input[type="checkbox"]:disabled+.control__mark::before {
-  background-color: $lightest-grey;
+.control__input:checked:disabled+.control__mark::after {
+  background-color: $light-grey;
 }
 
 .control__input:checked:disabled+.control__mark::before {

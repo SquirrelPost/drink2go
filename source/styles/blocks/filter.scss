@@ -45,10 +45,13 @@
 }
 
 .filter__button {
-  max-width: 137px;
+  max-width: 280px;
+  @media (min-width: $tablet-width) {
+    max-width: 137px;
 
-  &--small {
-    max-width: 120px;
+    &--small {
+      max-width: 120px;
+    }
   }
 
   @media (min-width: $desktop-width) {

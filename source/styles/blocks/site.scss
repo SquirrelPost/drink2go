@@ -65,17 +65,14 @@
   text-decoration: none;
   color: inherit;
 
-  &[href]:hover {
+  &[href]:hover,
+  &[href]:focus {
     color: $base-primary;
   }
 
   &[href]:active {
     color: $base-primary;
     background-color: $base-secondary;
-  }
-
-  &[href]:focus {
-    color: $base-primary;
   }
 
   @media (min-width: $tablet-width) {

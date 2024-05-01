@@ -33,16 +33,24 @@
       </button>
       <ul class="main-nav__list site">
         <li class="main-nav__list-item main-nav__site-item site__item site__item--current">
-          <a class="site__link" title="Вы сейчас здесь">Главная</a>
+          <a class="site__link" title="Вы сейчас здесь">
+            <span class="site__text">Главная</span>
+          </a>
         </li>
         <li class="main-nav__list-item main-nav__site-item site__item">
-          <a class="site__link" href="#">Каталог</a>
+          <a class="site__link" href="#">
+            <span class="site__text">Каталог</span>
+          </a>
         </li>
         <li class="main-nav__list-item main-nav__site-item site__item">
-          <a class="site__link" href="#">Доставка</a>
+          <a class="site__link" href="#">
+            <span class="site__text">Доставка</span>
+          </a>
         </li>
         <li class="main-nav__list-item main-nav__site-item site__item">
-          <a class="site__link" href="#">О нас</a>
+          <a class="site__link" href="#">
+            <span class="site__text">О нас</span>
+          </a>
         </li>
       </ul>
       <ul class="main-nav__list personalisation-list">
@@ -81,9 +89,9 @@
             <div class="slider__price-container">
               <span class="slider__old-price price price--old">295₽</span>
               <span class="slider__price price">225₽</span>
-              <a class="slider__button-order button" href="#">
+              <button class="slider__button-order button" type="button">
                 <span class="slider__button-text">Заказать</span>
-              </a>
+              </button>
             </div>
           </div>
           <div class="slider__image-wrapper">
@@ -113,9 +121,9 @@
             <div class="slider__price-container">
               <span class="slider__old-price price price--old">285₽</span>
               <span class="slider__price price">265₽</span>
-              <a class="slider__button-order button" href="#">
+              <button class="slider__button-order button" type="button">
                 <span class="slider__button-text">Заказать</span>
-              </a>
+              </button>
             </div>
           </div>
           <div class="slider__image-wrapper">
@@ -145,9 +153,9 @@
             <div class="slider__price-container">
               <span class="slider__old-price price price--old">395₽</span>
               <span class="slider__price price">375₽</span>
-              <a class="slider__button-order button" href="#">
+              <button class="slider__button-order button" type="button">
                 <span class="slider__button-text">Заказать</span>
-              </a>
+              </button>
             </div>
           </div>
           <div class="slider__image-wrapper">
@@ -308,7 +316,7 @@
               </div>
               <div class="filter__button-container">
                 <button class="filter__button button" type="submit">Применить</button>
-                <button class="filter__button filter__button--small button button--second"
+                <button class="filter__button filter__button--small button button--secondary"
                   type="reset">Сбросить</button>
               </div>
             </form>
@@ -322,9 +330,159 @@
             </select>
           </div>
           <div class="catalog__products products">
-            <!-- <ul class="products__list">
-
-          </ul> -->
+            <ul class="products__list">
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-1@1x.webp 1x, images/products/coffee-can-1@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-1@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-1@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-2@1x.webp 1x, images/products/coffee-can-2@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-2@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-2@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-3@1x.webp 1x, images/products/coffee-can-3@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-3@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-3@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-4@1x.webp 1x, images/products/coffee-can-4@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-4@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-4@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-5@1x.webp 1x, images/products/coffee-can-5@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-5@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-5@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="products__item product-card">
+                <a class="product-card__link" href="#">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/products/coffee-can-6@1x.webp 1x, images/products/coffee-can-6@2x.webp 2x">
+                    <img class="product-card__image" src="images/products/coffee-can-6@1x.png" width="130" height="188"
+                      srcset="images/products/coffee-can-6@2x.png 2x"
+                      alt="Банка специализированного кофейного напитка бежевого цвета.">
+                  </picture>
+                </a>
+                <a class="product-card__link-title" href="#">
+                  <h3 class="product-card__title headline headline--h3">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                <div class="product-card__order-container">
+                  <p class="product-card__price price">225₽</p>
+                  <button class="product-card__order-button button button--with-icon" type="button">
+                    <span class="product-card__button-text">В корзину</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="catalog__pagination pagination">
+            <button class="pagination__button pagination__button--prev button button--secondary" type="button">
+              <span class="pagination__button-text">Назад</span>
+            </button>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <button class="pagination__page-number button button--secondary" type="button">
+                  <span class="pagination__page-number-text">1</span>
+                </button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__page-number pagination__page-number--current button button--secondary" type="button">
+                  <span class="pagination__page-number-text">2</span>
+                </button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__page-number button button--secondary" type="button">
+                  <span class="pagination__page-number-text">3</span>
+                </button>
+              </li>
+            </ul>
+            <button class="pagination__button pagination__button--next button button--secondary" type="button">
+              <span class="pagination__button-text">Вперёд</span>
+            </button>
           </div>
         </div>
       </div>

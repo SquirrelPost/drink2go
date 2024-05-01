@@ -68,6 +68,16 @@
     background-color: $lightest-grey;
     color: $base-grey;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
 }
 
 .range__slider {
