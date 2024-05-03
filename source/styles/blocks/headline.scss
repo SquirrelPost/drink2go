@@ -2,11 +2,10 @@
   .headline {
     @include font(36px, 48px);
     font-weight: 700;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
 
     @media (min-width: $tablet-width) {
       @include font(56px, 80px);
-      letter-spacing: 1px;
     }
 
     &--h2 {

@@ -12,23 +12,11 @@
     background-color: $base-white;
     z-index: 1;
   }
-
-  //   position: relative;
-  //     max-width: 445px;
-  //     gap: 10px 35px;
-  // }
-
-  // @media (min-width: $desktop-width) {
-  // gap: 22px;
-  //     @include font (20px, 30px);
-  //     margin-left: 130px;
-  //     margin-bottom: 6px;
-  //     color: $color-white;
-  //     max-width: 480px;
-  // }
 }
 
 .site__item {
+  text-align: center;
+
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $base-secondary;
 
@@ -41,23 +29,12 @@
     min-height: 80px;
   }
 
-  //   text-align: center;
-  //   position: relative;
-
   &--current {
     @media (min-width: $tablet-width) {
       color: $base-primary;
       border-bottom: 2px solid $base-primary;
     }
-
-    //     @media (min-width: $desktop-width) {
-    //       border-bottom-color: $color-white;
-    //     }
   }
-
-  //   &--current .site__link--inner {
-  //     border-bottom-color: $color-green;
-  //   }
 }
 
 .site__link {
@@ -75,18 +52,11 @@
     background-color: $base-secondary;
   }
 
-  @media (min-width: $tablet-width) {
-    padding: 32px 20px 30px;
-    //     margin-top: 10px;
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
   }
 
-  //   @media (min-width: $desktop-width) {
-  //     padding: 7px 0;
-  //     margin-top: 8px;
-
-  //     &[href]:focus {
-  //       outline-color: $color-white;
-  //     }
-  //   }
-
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px 30px;
+  }
 }
