@@ -1,16 +1,22 @@
 .site {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   min-width: 320px;
   width: 100%;
 
   @media (max-width: $mobile-width-only) {
-    flex-direction: column;
     position: absolute;
     top: 60px;
     left: 0;
     background-color: $base-white;
     z-index: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 0 20px;
   }
 }
 
@@ -58,5 +64,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-shrink: 0;
   }
 }

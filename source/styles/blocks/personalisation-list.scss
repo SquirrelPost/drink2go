@@ -1,8 +1,9 @@
 .personalisation-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 
-  @media (max-width: $mobile-width-only) {
-    padding-right: 40px;
+  @media (min-width: $desktop-width) {
+    gap: 0 21px;
   }
 }
 

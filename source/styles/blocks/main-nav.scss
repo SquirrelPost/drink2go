@@ -5,6 +5,7 @@
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.02em;
+  align-items: start;
 
   &--closed {
     .main-nav__toggle {
@@ -18,6 +19,14 @@
       background-image: url("../../icons/menu-cross.svg");
       background-size: 12px 12px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 162px;
   }
 }
 
@@ -57,13 +66,8 @@
   }
 }
 
-
 .main-nav__list {
   @include list-reset;
-
-  @media (min-width: $desktop-width) {
-    gap: 20px;
-  }
 }
 
 .main-nav__list-item {
@@ -72,10 +76,14 @@
   align-items: center;
 }
 
-.main-nav__list + .main-nav__list {
-  margin-left: 60px;
+// .main-nav__list + .main-nav__list {
+  // margin-left: 60px;
 
-  @media (min-width: $desktop-width) {
-    margin-left: 162px;
-  }
-}
+//   @media (min-width: $tablet-width) {
+// margin-left: auto;
+//   }
+
+  // @media (min-width: $desktop-width) {
+  //   margin-left: 162px;
+  // }
+// }

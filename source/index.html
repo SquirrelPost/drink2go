@@ -15,7 +15,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__logo">
       <a class="logo">
         <picture>
@@ -27,7 +27,7 @@
       <span class="header__logo-description">Интернет-магазин кофейных напитков</span>
     </div>
     <nav class="header__nav main-nav main-nav--closed">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle js-toggle-button" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <ul class="main-nav__list site">
@@ -67,13 +67,13 @@
     </nav>
   </header>
   <main class="page-main">
-    <section class="slider slider--flat-white">
+    <section class="slider slider--flat-white" data-test="hero">
       <h1 class="visually-hidden">Drink2Go — это интернет-магазин по продаже кофейных напитков.</h1>
       <div class="slider__switch slide-switch">
-        <button class="slide-switch__button slide-switch__button--prev" type="button">
+        <button class="slide-switch__button slide-switch__button--prev slider-button-prev" type="button">
           <span class="visually-hidden">Предыдущий продукт.</span>
         </button>
-        <button class="slide-switch__button slide-switch__button--next" type="button">
+        <button class="slide-switch__button slide-switch__button--next slider-button-next" type="button">
           <span class="visually-hidden">Следующий продукт.</span>
         </button>
       </div>
@@ -176,25 +176,25 @@
           </div>
         </li>
       </ul>
-      <ol class="slider__pagination slide-pagination">
-        <li class="slide-pagination__item">
-          <a class="slide-pagination__button slide-pagination__button--current" id="0-slide">
+      <ol class="slider__pagination slider-pagination">
+        <li class="slider-pagination__item">
+          <a class="slider-pagination__button slider-pagination__button--current" id="0-slide">
             <span class="visually-hidden">Первый слайд.</span>
           </a>
         </li>
-        <li class="slide-pagination__item">
-          <a class="slide-pagination__button" href="#" id="1-slide">
+        <li class="slider-pagination__item">
+          <a class="slider-pagination__button" href="#" id="1-slide">
             <span class="visually-hidden">Второй слайд.</span>
           </a>
         </li>
-        <li class="slide-pagination__item">
-          <a class="slide-pagination__button" href="#" id="2-slide">
+        <li class="slider-pagination__item">
+          <a class="slider-pagination__button" href="#" id="2-slide">
             <span class="visually-hidden">Третий слайд.</span>
           </a>
         </li>
       </ol>
     </section>
-    <section class="advantages">
+    <section class="advantages" data-test="features">
       <h2 class="advantages__title headline headline--h2">Главные причины выбрать Drink2Go</h2>
       <span class="advantages__badge badge">Преимущества</span>
       <ul class="advantages__list">
@@ -216,7 +216,7 @@
         </li>
       </ul>
     </section>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog" id="catalog">
       <div class="catalog__container">
         <h2 class="catalog__title headline headline--h2">Каталог кофейных напитков</h2>
         <span class="catalog__badge badge">Каталог</span>
@@ -328,7 +328,7 @@
               <option value="expensive">по уменьшению цены</option>
             </select>
           </div>
-          <div class="catalog__products products" id="catalog">
+          <div class="catalog__products products">
             <ul class="products__list">
               <li class="products__item product-card">
                 <a class="product-card__link" href="#">
@@ -487,7 +487,7 @@
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="map" data-test="map">
       <h2 class="visually-hidden">Карта месторасположения Drink2Go.</h2>
       <a class="map__link" href="https://maps.app.goo.gl/DdKs7b4Hwm6XkLE6A">
         <picture>
@@ -505,7 +505,7 @@
       </a>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__component footer__component--big-column">
       <div class="footer__logo-container">
         <a class="footer__logo logo">

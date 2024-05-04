@@ -1,4 +1,4 @@
-.slide-pagination {
+.slider-pagination {
   @include list-reset;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   }
 }
 
-.slide-pagination__button {
+.slider-pagination__button {
   display: flex;
   justify-content: center;
   align-items: center;

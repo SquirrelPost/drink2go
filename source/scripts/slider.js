@@ -10,7 +10,7 @@ const SLIDE_INDEX = {
 const slider = document.querySelector('.slider');
 const switchButtonPrev = slider.querySelector('.slide-switch__button--prev');
 const switchButtonNext = slider.querySelector('.slide-switch__button--next');
-const paginationButtons = slider.querySelectorAll('.slide-pagination__button');
+const paginationButtons = slider.querySelectorAll('.slider-pagination__button');
 const sliderItems = slider.querySelectorAll('.slider__item');
 
 const listOfSliderClasses = slider.classList;
@@ -49,10 +49,10 @@ const changeBgColor = () => {
 };
 
 const changePagination = () => {
-  currentPaginationButton = slider.querySelector('.slide-pagination__button--current');
-  currentPaginationButton.classList.remove('slide-pagination__button--current');
+  currentPaginationButton = slider.querySelector('.slider-pagination__button--current');
+  currentPaginationButton.classList.remove('slider-pagination__button--current');
   currentPaginationButton.setAttribute('href', '#');
-  paginationButtons[newIndex].classList.add('slide-pagination__button--current');
+  paginationButtons[newIndex].classList.add('slider-pagination__button--current');
   paginationButtons[newIndex].removeAttribute('href');
 };
 
