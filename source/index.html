@@ -9,7 +9,6 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="/vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
@@ -223,7 +222,7 @@
         <span class="catalog__badge badge">Каталог</span>
         <div class="catalog__content-container">
           <div class="catalog__filter filter">
-            <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
               <div class="filter__container">
                 <fieldset class="filter__fieldset range">
                   <legend class="filter__legend label">Цена</legend>
@@ -489,6 +488,7 @@
       </div>
     </section>
     <section class="map">
+      <h2 class="visually-hidden">Карта месторасположения Drink2Go.</h2>
       <a class="map__link" href="https://maps.app.goo.gl/DdKs7b4Hwm6XkLE6A">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"

@@ -1,7 +1,7 @@
 .pagination {
   display: grid;
   grid-template-columns: 40px auto 40px;
-  align-items: center;
+  align-items: start;
   gap: 20px;
 
   @media (min-width: $tablet-width) {
