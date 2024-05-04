@@ -1,0 +1,55 @@
+.contacts__address {
+  @include font(14px, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  font-style: normal;
+}
+
+.contacts__line {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    position: relative;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-color: $base-primary;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--location::before {
+    mask-image: url("../../icons/address.svg");
+  }
+
+  &--phone::before {
+    mask-image: url("../../icons/phone.svg");
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $primary-lighter;
+  }
+
+  &[href]:hover::before,
+  &[href]:focus::before {
+    background-color: $primary-lighter;
+  }
+
+  &[href]:active {
+    color: $primary-darker;
+  }
+
+  &[href]:active::before {
+    background-color: $primary-darker;
+  }
+}

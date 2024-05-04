@@ -1,0 +1,66 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  max-width: 160px;
+  gap: 10px 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $base-grey;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  &--vkontakte::after {
+    mask-image: url("../../icons/social-vk.svg");
+  }
+
+  &--pinterest::after {
+    mask-image: url("../../icons/social-pinterest.svg");
+    width: 22px;
+    height: 22px;
+  }
+
+  &--ok::after {
+    mask-image: url("../../icons/social-ok.svg");
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    background-color: $base-secondary;
+
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+
+  &[href]:active {
+    background-color: $primary-opacity;
+
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+}

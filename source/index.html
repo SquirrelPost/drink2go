@@ -38,7 +38,7 @@
           </a>
         </li>
         <li class="main-nav__list-item main-nav__site-item site__item">
-          <a class="site__link" href="#">
+          <a class="site__link" href="#catalog">
             <span class="site__text">Каталог</span>
           </a>
         </li>
@@ -329,7 +329,7 @@
               <option value="expensive">по уменьшению цены</option>
             </select>
           </div>
-          <div class="catalog__products products">
+          <div class="catalog__products products" id="catalog">
             <ul class="products__list">
               <li class="products__item product-card">
                 <a class="product-card__link" href="#">
@@ -496,7 +496,8 @@
           <source type="image/webp" media="(min-width: 768px)"
             srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.jpg 1x, images/map/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 1440px)"
+            srcset="images/map/map-desktop@1x.jpg 1x, images/map/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.jpg 1x, images/map/map-tablet@2x.jpg 2x">
           <img class="map__image" src="images/map/map-mobile@1x.jpg" width="320" height="420"
             srcset="images/map/map-mobile@2x.jpg 2x" alt="Изображение карты c адресом Drink2Go.">
@@ -504,6 +505,102 @@
       </a>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer__component footer__component--big-column">
+      <div class="footer__logo-container">
+        <a class="footer__logo logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/logo/logo-desktop.svg">
+            <img class="logo__icon logo__icon--footer" src="images/logo/logo-tablet.svg" width="82" height="36"
+              alt="Иконка логотипа.">
+          </picture>
+        </a>
+        <span class="footer__logo-description">Интернет-магазин кофейных напитков</span>
+      </div>
+      <ul class="footer__list social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы во Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--pinterest" href="#">
+            <span class="visually-hidden">Мы в Пинтересте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--ok" href="#">
+            <span class="visually-hidden">Мы в Одноклассниках.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="footer__component">
+      <h2 class="footer__section-title headline headline--h4">Интернет-магазин</h2>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="#catalog">
+            <span class="footer__text">Каталог</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">Доставка</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">Способы оплаты</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">О нас</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__component">
+      <h2 class="footer__section-title headline headline--h4">Медиа</h2>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">Блог</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">Информация для СМИ</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">
+            <span class="footer__text">Правовая информация</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__component contacts">
+      <h2 class="footer__section-title headline headline--h4">Контакты</h2>
+      <address class="contacts__address">
+        <p class="contacts__line contacts__line--location">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+        <a class="contacts__line contacts__line--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+      </address>
+    </section>
+    <div class="footer__component footer__component--long-line copyright">
+      <span class="copyright__text">Разработано в</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="Лендинг интенсива HTML Academy">
+        <span class="copyright__text">HTML Academy</span>
+        <svg class="copyright__icon" role="img" aria-label="Логотип HTML Academy." focusable="false" width="12"
+          height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z"
+            fill="CurrentColor" />
+        </svg>
+      </a>
+    </div>
+  </footer>
 
   <script src="vendor/nouislider/nouislider.js"></script>
 

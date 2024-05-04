@@ -1,0 +1,29 @@
+.copyright {
+  @include font(12px, 16px);
+  max-width: 280px;
+  color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.copyright__icon {
+  flex-shrink: 0;
+}
