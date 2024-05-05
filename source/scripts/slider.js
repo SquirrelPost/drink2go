@@ -2,11 +2,6 @@ const BG_COLORS = [
   'slider--flat-white', 'slider--lavender-latte', 'slider--espresso'
 ];
 
-const SLIDE_INDEX = {
-  MIN: 0,
-  MAX: 2,
-};
-
 const slider = document.querySelector('.slider');
 const switchButtonPrev = slider.querySelector('.slide-switch__button--prev');
 const switchButtonNext = slider.querySelector('.slide-switch__button--next');
@@ -21,13 +16,20 @@ let currentPaginationButton;
 let currentSliderItem;
 let currentId;
 
+const calcMaxSlideIndex = () => paginationButtons.length - 1;
+
+const slideIndex = {
+  min: 0,
+  max: calcMaxSlideIndex(),
+};
+
 const checkIndex = (index) => {
-  if (index === SLIDE_INDEX.MIN) {
+  if (index === slideIndex.min) {
     switchButtonPrev.disabled = true;
   } else {
     switchButtonPrev.disabled = false;
   }
-  if (index === SLIDE_INDEX.MAX) {
+  if (index === slideIndex.max) {
     switchButtonNext.disabled = true;
   } else {
     switchButtonNext.disabled = false;

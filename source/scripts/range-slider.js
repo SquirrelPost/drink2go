@@ -1,13 +1,15 @@
-const PRICE = {
-  MAX: 1055,
-  MIN: 0,
+const price = {
+  max: 1055,
+  min: 0,
 };
-const STEP = 1;
+const step = 1;
+
+const rangeContainer = document.querySelector('.range');
 
 const initRangeSlider = () => {
-  const rangeSlider = document.querySelector('.range__slider');
-  const inputMin = document.querySelector('#min-price');
-  const inputMax = document.querySelector('#max-price');
+  const rangeSlider = rangeContainer.querySelector('.range__slider');
+  const inputMin = rangeContainer.querySelector('#min-price');
+  const inputMax = rangeContainer.querySelector('#max-price');
 
   if (!rangeSlider || !inputMin || !inputMax) {
     return;
@@ -18,10 +20,10 @@ const initRangeSlider = () => {
     start: [0, 900],
     connect: true,
     range: {
-      min: PRICE.MIN,
-      max: PRICE.MAX
+      min: price.min,
+      max: price.max
     },
-    step: STEP,
+    step: step,
   });
 
   rangeSlider.noUiSlider.on('update', (values, handle) => {

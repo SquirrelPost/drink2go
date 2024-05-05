@@ -90,7 +90,7 @@
 }
 
 .control__input:disabled + .control__mark,
-.control__input:disabled~.control__label {
+.control__input:disabled ~ .control__label {
   border-color: $light-grey;
   color: $base-grey;
   background-color: $lightest-grey;

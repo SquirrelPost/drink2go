@@ -1,8 +1,3 @@
-const PAGINATION_INDEX = {
-  MIN: 0,
-  MAX: 2,
-};
-
 const pagination = document.querySelector('.pagination');
 const switchButtonPrev = pagination.querySelector('.pagination__button--prev');
 const switchButtonNext = pagination.querySelector('.pagination__button--next');
@@ -14,20 +9,27 @@ let currentIndex;
 let newIndex;
 let newId;
 
+const calcMaxPagination = () => pageNumberButtons.length - 1;
+
+const paginationIndex = {
+  min: 0,
+  max: calcMaxPagination(),
+};
+
 const checkIndex = (index) => {
-  if (index === PAGINATION_INDEX.MIN) {
+  if (index === paginationIndex.min) {
     switchButtonPrev.style.display = 'none';
   } else {
     switchButtonPrev.style.display = 'flex';
   }
-  if (index === PAGINATION_INDEX.MAX) {
+  if (index === paginationIndex.max) {
     switchButtonNext.style.display = 'none';
   } else {
     switchButtonNext.style.display = 'flex';
   }
 };
 
-const checkCurrentIndex = () => {
+const calcCurrentIndex = () => {
   currentPageNumber = pagination.querySelector('.pagination__page-number--current');
   currentId = currentPageNumber.id;
   currentIndex = Number(currentId[0]);
@@ -45,7 +47,7 @@ const changePageNumber = () => {
 const onPageNumberButtonClick = (evt) => {
   newId = evt.target.id;
   newIndex = Number(newId[0]);
-  checkCurrentIndex();
+  calcCurrentIndex();
 
   if (currentIndex !== newIndex) {
     changePageNumber(newIndex);
@@ -58,7 +60,7 @@ const initPaginationButtons = () => {
 };
 
 const initPagination = () => {
-  checkCurrentIndex();
+  calcCurrentIndex();
   checkIndex(currentIndex);
   initPaginationButtons();
 };

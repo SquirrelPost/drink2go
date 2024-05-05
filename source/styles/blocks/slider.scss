@@ -5,7 +5,7 @@
     background-color: $flat-white;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-      background-image: linear-gradient(180deg, $flat-white 640px, $base-white 640px);
+      background-image: linear-gradient(0deg, $base-white 188px, $flat-white 188px);
     }
   }
 
@@ -13,7 +13,7 @@
     background-color: $lavender-latte;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-      background-image: linear-gradient(180deg, $lavender-latte 640px, $base-white 640px);
+      background-image: linear-gradient(0deg, $base-white 188px, $lavender-latte 188px);
     }
   }
 
@@ -21,7 +21,7 @@
     background-color: $espresso;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-      background-image: linear-gradient(180deg, $espresso 640px, $base-white 640px);
+      background-image: linear-gradient(0deg, $base-white 188px, $espresso 188px);
     }
   }
 }
@@ -50,7 +50,7 @@
       min-height: 714px;
       flex-direction: row;
       gap: 30px;
-      padding: 30px 40px 60px 65px;
+      padding: 30px 40px 84px 65px;
     }
   }
 }
@@ -81,6 +81,7 @@
 
 .slider__image {
   display: block;
+  object-fit: cover;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -125,6 +126,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;

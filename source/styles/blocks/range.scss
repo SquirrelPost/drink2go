@@ -84,15 +84,6 @@
   margin-top: 10px;
   margin-bottom: 34px;
 
-  &:disabled.noUi-connect {
-    background-color: $base-grey;
-  }
-
-  &:disabled.noUi-handle {
-    border-color: $base-grey;
-    background-color: $lightest-grey;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
   }
@@ -102,15 +93,20 @@
   }
 }
 
+.range__slider[disabled].noUi-connect {
+  background-color: $base-grey;
+}
+
+.range__slider[disabled].noUi-handle {
+  border-color: $base-grey;
+  background-color: $lightest-grey;
+}
+
 .range__slider.noUi-target {
   width: 100%;
   height: 4px;
   background-image: linear-gradient(to bottom, transparent 1px, $light-grey 1px, $light-grey 3px, transparent 3px);
   border: none;
-
-  @media (min-width: $tablet-width) {}
-
-  @media (min-width: $desktop-width) {}
 }
 
 .range__slider .noUi-connect {
@@ -137,6 +133,7 @@
 
   &:active {
     border-color: $base-primary;
+    box-shadow: inset 0 0 0 2px $base-white;
     background-color: $base-primary;
   }
 }

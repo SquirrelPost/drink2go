@@ -18,8 +18,11 @@
 }
 
 .footer__logo {
+  display: block;
+  padding-block: 1px;
+
   @media (min-width: $desktop-width) {
-    display: block;
+    padding-block: 0;
     margin-bottom: 10px;
   }
 }
@@ -59,7 +62,7 @@
 
   &--big-column {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 38px;
 
     @media (min-width: $tablet-width) {
@@ -71,7 +74,6 @@
     @media (min-width: $desktop-width) {
       grid-column: 1 / 2;
       flex-direction: column;
-      align-items: flex-start;
       justify-content: flex-start;
       gap: 50px;
       padding-top: 0;
@@ -82,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 3px;
 
     @media (min-width: $tablet-width) {
